@@ -18,9 +18,11 @@ Exibe uma relação de opções no comando desejado.
 
 - [x] [Git Add](commands/git_add.md)
 - [x] [Git Commit](commands/git_commit.md)
+- [x] [Git Config](commands/git_config.md)
+- [x] [Git Rebase](commands/git_rebase.md)
+- [x] [Git Remote](commands/git_remote.md)
 - [x] [Git Reset](commands/git_reset.md)
 - [x] [Git Revert](commands/git_revert.md)
-- [x] [Git Remote](commands/git_remote.md)
 
 ### Referências
 
@@ -28,6 +30,6 @@ A melhor referências de Git atualmente disponibilizada são:
 
 [Git Essentials](https://git-scm.com/book/pt-br/v2)
 
-[Atlassian Git and BitBucket](https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud)
+[Atlassian Git](https://www.atlassian.com/git/tutorials)
 
 [⬆ Voltar ao topo](#git)<br />
