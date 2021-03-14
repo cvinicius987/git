@@ -21,5 +21,3 @@ git reset --hard HEAD~1
 ```
 git reset 'HEAD@{1}'
 ```
-
-[⬆ Voltar ao topo](#git)<br />

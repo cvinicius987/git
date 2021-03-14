@@ -12,7 +12,7 @@ O git possui o <b>help</b>, podendo ser utilizado da seguinte forma:
 git <comando> --help
 ```
 
-Este mostra uma relação de opção no comando desejado.
+Exibe uma relação de opções no comando desejado.
 
 ### 💻 Conteúdo
 

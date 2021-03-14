@@ -17,5 +17,3 @@ git revert --continue
 ```
 git revert --abort
 ```
-
-[⬆ Voltar ao topo](#git)<br />

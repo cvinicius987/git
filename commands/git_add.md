@@ -1,6 +1,5 @@
 ## Git Add
 
-
 #### Verifica quais áreas os arquivos estão alocados:
 ```
 git status
@@ -25,6 +24,3 @@ git rm --cached README.md
 ```
 git reset README.md
 ```
-
-
-[⬆ Voltar ao topo](#git)<br />

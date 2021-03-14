@@ -1,10 +1,6 @@
 ## Git Remote
 
-
-#### Revertendo commits
+#### Add repositório remoto
 ```
-git revert <hash>
+git remote add <name> <repo>.git
 ```
-
-
-[⬆ Voltar ao topo](#git)<br />
