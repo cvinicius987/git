@@ -1,9 +1,9 @@
 ## Git Commit
 
-#### Commit de arquivos
-```
-git commit -m "Commit inicial do repositorio"
-```
+### Descrição
+
+Commits devem conter o minimo de alterações possíveis e mensagens que façam sentido para a alteração realizada.
+
 #### Log de Commits
 ```
 git log
@@ -12,4 +12,13 @@ git log
 #### Vendo detalhes do commit
 ```
 git show <hash>
+
 ```
+#### Commit de arquivos
+```
+git commit -m "Commit inicial do repositorio"
+```
+
+#### Alterando a mensagem do ultimo commit
+```
+git commit -m "Nova mensagem" --amend

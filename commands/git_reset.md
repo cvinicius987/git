@@ -1,18 +1,16 @@
 ## Git Reset
 
-> Reseta o repositário entre os commits existentes.
-
+#### Remover um arquivo do stage com reset
 ```
-#### Desfazendo o ultimo commit, mantendo as alterações nos arquivos (--soft)
+git reset -- README.md
+```
+
+#### Desfazendo o ultimo commit, mantendo as alterações no stage (--soft)
 ```
 git reset HEAD~1
 ```
-#### Desfazendo o ultimo commit, mantém os arquivos igual ao ultimo commit (--hard)
-```
-git reset --hard HEAD~1
-```
 
-#### Desfazendo o ultimo commit, mantém os arquivos igual ao ultimo commit (--hard)
+#### Desfazendo o ultimo commit, apagando as alterações (--hard)
 ```
 git reset --hard HEAD~1
 ```

@@ -20,7 +20,16 @@ git add .
 git rm --cached README.md
 ```
 
-#### Remover um arquivo do stage com reset
+#### Adicionando vários arquivos ao stage de forma gráfica
+
 ```
-git reset README.md
+git add -i
+```
+> Usando o menu escolher cada arquivo que deve estar no stage, evitando o git add para cada arquivo.
+
+
+#### Adicionando fragmentos de arquivos em commits diferentes
+
+```
+git add -p
 ```
