@@ -23,6 +23,7 @@ Exibe uma relação de opções no comando desejado.
 - [x] [Git Remote](commands/git_remote.md)
 - [x] [Git Reset](commands/git_reset.md)
 - [x] [Git Revert](commands/git_revert.md)
+- [x] [Git Push](commands/git_push.md)
 
 ### Referências
 
