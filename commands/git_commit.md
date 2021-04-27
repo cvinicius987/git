@@ -22,3 +22,9 @@ git commit -m "Commit inicial do repositorio"
 #### Alterando a mensagem do ultimo commit
 ```
 git commit -m "Nova mensagem" --amend
+```
+
+#### Alterando o autor do ultimo commit
+```
+git commit --amend --reset-author
+```
