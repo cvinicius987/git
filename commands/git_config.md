@@ -10,3 +10,10 @@ git config --global core.editor "subl -n -w"~
 git config --global user.name "Your Name"
 git config --global user.email you@example.com
 ```
+
+#### Resetando configurações locais e globais
+```
+git config --unset <config-name>
+
+git config --global --unset <config-name>
+```
