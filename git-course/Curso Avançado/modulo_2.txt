@@ -1,0 +1,48 @@
+
+Adicionar o template:
+
+	git add .
+
+	git commit -m "<mensagem desejada>"
+
+	Não é uma boa prática realiza o commit onde muitos arquivos são alterados e adicionados de uma vez, 
+	porque dificulta em operações fturas como merge, rebase ou rastreamento de atividades;
+
+	mensagens de commit: https://chris.beams.io/posts/git-commit/
+
+Visual Studio Code
+
+	Ctrl + Shift + P
+	
+		Utilitario para comandos do GIT;
+
+Atualização Remota
+
+	Usamos os comandos abaixo para realizar uma atualização e busca em repositórios remotos:
+
+	git push origin master 
+
+		Neste caso estamos enviando as alterações do repositório local para o repositorio remote chamado origin e a branch
+		que iremos enviar é a master
+	
+Git Log
+
+	Ao utilizar o visual studio code podemos utilizar o plugin git history
+	ele exibe de forma organizada todos o hitorico de terefas executadas no repositório
+	o git log exibe na linha de comando, e quando possuimos muitos commit e branches a exbição não fica
+	organizada.
+
+Git Pull e Pull Rebase
+
+	Ao realizar um git pull onde temos alteração locais e remotas, estas irão ter que serem unidas em um novo commit 
+	que irá integrar todas as modificações;
+	
+	A operação de rebase não cria novos merges, ele adiciona a diferença de commits na mesma arvore cronologica,
+	isto facilita a leitura de um log de commits;
+
+Blame e Stash
+
+	Git Blame é um funcionalidade que permite a rastreamento dos commits executados em partes do código;
+
+	O Stash é uma area antes do commit usado para armazenar alterações que ainda não estão prontas para um commit real
+	ao stash é atribuido um nome no qual depois podemos restaurar via pop stash fornecendo o nome dado anteriormente;

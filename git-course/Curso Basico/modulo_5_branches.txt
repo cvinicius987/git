@@ -1,0 +1,43 @@
+
+Branches
+
+	Criando branches:
+
+		git checkout -b testing => onde testing é o nome da branch
+
+		git branch => exibe todos as branch do projeto coloca um * na branch corrente
+
+	Navagendo, Movendo e Deletando
+
+		git checkout nome_branch => mudança entre branches;
+
+		git branch -D testing => Deletando uma branch
+	
+	Merge de branches
+	
+		Merge
+		
+			Cria um commit novo para juntar as modificações entre branches;
+
+			Geralmente utilizado em casos de pull request, adicição de novas features;
+
+			Contra: Cria um novo commit para juntar as diferenças
+
+			Comandos:
+
+				git merge <nome_branch para merge>
+
+		Rebase
+
+			Mantem o ciclo de forma linear, colocando todos os branches em linha;	
+
+			Contra: Perde a ordem cronologica, porque mantem as alterações de forma linear;
+
+			Comandos:
+
+				git rebase <nome_branch para merge>
+		
+
+		
+
+		

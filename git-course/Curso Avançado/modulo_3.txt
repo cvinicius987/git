@@ -1,0 +1,185 @@
+﻿Revertendo Commits no Master com Revert
+
+	https://git-scm.com/docs/git-revert
+
+    Como podemos reverter uma alteração executada na master:
+
+    git checkout master
+
+    git add . 
+
+    git commit -m "Codigo com falha"
+
+    git push origin master
+
+    git log
+
+        Pega o ID do commit que queremos reverter
+
+    git revert <codigo do commit>
+	
+	Após irá abrir uma janela dizendo quais arquivos serão revertidos com esta operação
+
+	O revert não apaga o historico de commit ou seja, 
+    ele é o recomendado a ser utilizado devido a rastreabilidade dos commits, recomendado principalmente
+    para branch master.
+
+Revertendo com Reset
+
+	https://git-scm.com/docs/git-reset
+
+	git reset --hard/--soft
+
+	--hard 
+
+		Retorna para este commit e apaga tudo que foi feito depois;
+
+	--soft
+
+		Retorna as alterações para área de stagged, dando a possibilidade de correção do problema;
+
+	Vantagens do Reset
+
+		Serve para evitar commits sujos, recomendado para branches separados, ou que você esteja trabalhando sozinho, não recomendado para o master;
+
+		Caso você tenha a alteração que o reset tenha revertido já esteja na origin/master, será necessário que você faça um --force
+		forcando o remote a atualizar seus historicos de commits; 
+
+Editando commits com amend
+
+	https://help.github.com/articles/changing-a-commit-message/
+
+	Fornece a possibilidade de alterar commits locais, como mensagens, arquivos, etc;
+
+	Não recomendado para MASTER;
+
+	Após o commit ter sido realizado localmente, basta executar:
+	
+	git commit --amend
+
+		Aqui você podera executar as modificações desejadas no ultimo commit realizado.
+
+Pegando commits específicos de outros branchs com cherry-pick
+
+	https://git-scm.com/docs/git-cherry-pick
+
+	É possivel pegar commits de outras branches sem a necessidade de realizar merge ou rebase;
+
+	Para isso basta realizar:
+
+		git checkout <branch_com_commit>
+
+		git log (Pegar a hash do commit) 
+
+		git checkout master
+		
+		git cherry_pick <hash>
+
+	Após isso a modificação do commit vai ser encaminhado a branch desejada;
+
+Commit em partes de um arquivo
+
+	Podemos commitar partes de uma arquivo em commits diferentes, para isso basta no momento do add, faezr:
+
+		git add -p
+
+		Irá abrir uma janela onde podemos escolher partes do arquivo que irão fazer parte de um mesmo commit;
+
+Juntando commits com Squash
+
+	É possível juntar commits já realizado para unir pequenos commits;
+
+	git rebase -i HEAD~3
+
+		No caso HEAD significa o commit atual e 3 a quantidades de commits que você que unir, sendo
+		de forma decrescente, ou seja, aqui iremos unir os 3 ultimos commits;
+
+		Irá aparecer uma tela onde temos que definir quais e de qual forma
+		queremos realizar a união;
+
+Juntando commits com fixup e autosquash
+
+	Utilizado para integrar commits:
+
+		git commit -m "<msg>"
+
+		git log ==>> Recupera o id do commit
+
+	Realiza novas alteração, e no momento desse novo commit você utiliza:
+
+		git commit --fixeup <codigo do commit desejado>
+
+	Como juntar os commits:
+
+		git reabase -i --autosquash <codigo do commit>
+
+	Essa funcionalidade é interessante para deixar o log de commits mais legivel, porque em branches features é comum
+	o log ficar poluido com com pequenos commits que poderiam estar em somente 1;
+
+Resolvendo divergências de repositórios com --rebase
+
+	As vezes ao mandar um commit local para o remoto pode haver divergência entre commits (conflitos):
+
+	Ao enviar:
+		git push origin master
+
+	Acontece um erro devido a ordem dos commits, para solucionar utilizando rebase, primeiro atualizamos nosso repositorio
+	local com as alterações remotes:
+
+		git pull origin master --rebase
+	
+	Aqui será aplicado as alterações remotas dentro da ordem corretas dos commits, após podemos enviar as alterações
+	para o servidor remoto:
+
+		git push origin master
+
+	https://git-scm.com/docs/git-merge#_how_conflicts_are_presented
+
+Resolvendo conflitos em modo manual
+
+	Acontece as vezes de acontecer alterações simultaneas em um mesmo branches, e no momento de realizar um pull/push
+	podem acontecer conflits em arquivos, nesse momento o git informa quais arquivos possuem conflitos e cabe ao devido
+	realizar o conserto manualmente.
+
+	Após isso devemos adicionar ao stagged:
+
+		git add <arquivo>
+
+	Após corrigir todos os conflitos:
+
+		Devemos adicionar ao stagged:
+
+		git add <arquivo>
+
+		E continuar o merge/rebase:
+
+		git rebase --continue 
+		 ou
+		git merge --continue
+	
+	Depois de resolver o conflito podemos retomar a operação de push/pull.
+
+Usando o Autocorrect para prever erros de digitação
+
+	git config --global help.auto.correct 1
+
+	Correção automatica em caso de erros de digitação dos comandos
+
+Gerando zip de repositórios inteiros
+
+	git archive master --format=zip --output=zip
+
+	Criação de um zip de branch.
+
+O grande salvador git reflog
+
+	Retorna todo o log de trabalho executado no git
+
+		git reflog
+
+	Com este comando é possivel recuperar coisas feitas com:
+	
+		 git reset --hard
+
+		 Porque mesmo executando o reflog irá mostrar um historico de todos hash executados,
+		 assim é possivel voltar para um hash mesmo após o git reset --hard

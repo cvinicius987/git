@@ -1,0 +1,25 @@
+GitHub na pratica
+
+	Dono do repository pode ser uma pessoa ou organiza��o;
+
+	O fork do projeto � feito no momento da opera��o, ou seja, caso o projeto tenha uma altera��o sua base de codigo n�o ter� as altera��es
+	isso � muito util no momento que voc� tenta contribuir para um projeto open source.
+
+Issues
+
+	Templates: https://github.com/devspace/awesome-github-templates
+
+		criar uma pasta dentro do projeto .github
+		criar os arquivos de templates dentro dessa pasta por exemplo issue_template.md
+
+Close Issues with commit
+
+	É possivel concluir issues através de um commit;
+
+	https://help.github.com/articles/closing-issues-using-keywords/
+
+Pull Requests
+
+	São branches separados para realizar integração entre outras branches;
+
+	Muito utilizado em projetos open source;

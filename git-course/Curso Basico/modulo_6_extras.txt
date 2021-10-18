@@ -1,0 +1,49 @@
+Gitignore
+		
+	Utilizado para não gerenciar os arquivos, ou seja ignorar os arquivos;
+
+	https://github.com/github/gitignore
+
+Gitstash
+	
+	Serve para manter salvas alteração que ainda não foram comitadas em nenhum branch, por exemplo, você esta trabalhando em uma feature
+	e agora precisa salvar e trabalhar em uma outra branch mas sem commit das suas tauis operações.
+
+	git stash
+		Manda as mudanças para um area especifica para depois conseguir recuperar
+
+	git stash apply
+		Aplica as mudanças alocadas na area de stash, na branch corrente
+
+	git stash list
+		Lista todos os stash disponiveis
+	
+	git stash clean
+		Remove todos os stash da memoria
+
+Alias
+
+	git config --global alias.s status
+
+		Cria um alias para um determinado comando.
+
+Versionando Tags	
+	
+	git tag -a 1.0.0 -m "Mensagem"
+
+	git push origin master --tags
+		
+Git Revert
+	
+	git revert <commit>
+		Usado para reverter uma alteração indesejada, mas sem apagar a branch como acontece com o reset.
+
+Apagando branches e tags remotos
+
+	git tag -d 1.0.1
+		Apagando uma determinada tag
+
+	git push origin :1.0.1
+		Enviando as alterações para o repositório remoto	
+		
+	

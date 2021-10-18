@@ -1,0 +1,38 @@
+
+
+Acesso a repositorios remotos de codigo
+
+	GitHub
+		A autenticação remota é baseada em ssh utilizando key de acesso; 
+		
+		https://help.github.com/articles/connecting-to-github-with-ssh/
+
+		No caso do SO a chava ficou .ssh/id_rsa.pub
+
+Ligando ao repositorio remoto
+	
+	git remote add origin git@github.com/cvinicius987/git-course.git
+
+	Listando detalhes
+		git remote
+	
+	Listando detalhes com descrição
+		git remote -v
+	
+	Desvinculando do repositorio remoto
+		git remote rm origin
+	
+	Enviando para o servidor
+		git push -u origin master
+
+Clonando repositórios
+
+	git clone <url/ssh> nome do clone
+
+	Realiza uma cópia do repositório original.
+
+Fazendo o Fork
+
+	Cópia de projeto que não é seu.
+
+	Interesse ao editar um projeto open, porque podemos editar e fazer um pull request para o author do projeto.

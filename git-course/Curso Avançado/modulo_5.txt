@@ -1,0 +1,75 @@
+﻿Workflow
+
+    Centralized Workflow, Feature Branch ou Gitflow Workflow
+
+Centralized Workflow
+
+    Branch unico (master)
+
+    Facil para transição de SVN;
+
+    Funciona bem com equipes pequenas, entre 4 a 5 pessoas;
+
+    Ideal para projeto pessoais quando há apenas um owner/dev;
+
+    O comando mais utilizado é, porque faz um ordem nos commits dexando os ultimos no topo:
+
+        git push origin master --rebase
+
+Feature Branch
+
+    Uma branch para cada feature;
+
+    Evita conflitos e permite trabalhos em paralelo;
+
+    Funciona bem com equipes maiores;
+
+        Manter o branch que estamos trabalhando atualizado com o master;
+
+        Retirar commits não importantes;
+    
+    Quando termina a feature em seu repositorio local, o dev deve encaminhar para o remoto a branch realizando:
+
+        git push origin <nome_branch>
+
+    No Repositorio remoto, a branch irá ser um pull request / merge request, onde as alterações realizadas na branch em dev
+    são sugeridas a serem adicionadas na branch master, pondendo ser:
+
+        Merge
+
+        rebase
+         
+        Rebase Squash
+
+Gitflow Workflow
+
+    Utilziado em grandes equipes onde temos varias funcionalides acontecendo em paralelo;
+
+    São utilizados:
+
+        Feature branch;
+            Criada a cada nova funcionalidade, após merge com develop pode ser excluida;
+
+        Develop;
+            Concentra a linha de desenvolvimento concluido atual;
+
+        Realese
+            Recebe dados da develop para criação de uma release, após merge/rebase com a master pdoe ser excluida;
+
+        Master
+            Release principal/atual, após receber um release deve executar uma Tag;
+
+        Hotfix
+            Criada a partir da master para correção, após concluida deve ser feito merge com develop, master, e realizar uma Tag
+            após pode ser excluida;
+
+    	http://danielkummer.github.io/git-flow-cheatsheet/index.pt_BR.html
+
+Git Hub Pages
+	
+	https://willianjusten.com.br/making-of-parte-2/
+
+	https://willianjusten.com.br/dominio-proprio-no-github-pages/
+	
+
+

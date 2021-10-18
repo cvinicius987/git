@@ -1,0 +1,69 @@
+
+Controle de versão
+
+	Sistemas tradicionais trabalham com as diferenças dos arquivos
+
+	Git trabalha com o estado/snapshots dos arquivos
+
+Historia
+	Criado a partir da ideia do BitKeeper
+
+	Criado pelo mesmo criado do linux.
+
+Instalação
+
+	http://git-scm.com
+
+Configuração
+	3 git configs sendo global, user, project
+
+	git config --global user.name "<nome>"
+
+	git config --global core.editor "<nome>"
+
+Repositório
+
+	git init >>>>> Inicia um repositorio
+
+	Cria um diretorio com informações do repositorio
+
+O ciclo de vida dos Arquivos
+
+	untracked 	>>> Acabou de ser add, git ainda não gerencia;
+	unmodified 	>>> Adicionado porem não modificado;
+	modified 	>>> Arquivo Editado;
+	staged 		>>> Area de versionamento; 
+
+	git status >>>> Exibe o status do repositorio
+	
+	git add "<nome>" >>>>>>>>> Adiciona o arquivo ao repositorio e já pode ser comitado
+
+	A cada alteração é necessário realizar um "git add" no arquivo
+
+	git commit -m "" >>>>>> Cria um versão com as alterações, gera um hash unico
+
+Comandos
+
+	git init		Inicia um repositorio
+
+	git status		Exibe o status do repositorio
+
+	git --version		Exibe a versão do controlador de versão
+
+	git log			Exibe o historico de logs
+
+	git shortlog		Exibe o historico de logs de forma agrupada
+
+	git diff        	Exibe as diferenças de arquivos que devem ser adicionados, após o add não será mais exibida diferenças
+
+		--name-only	Exibe somente os nomes dos arquivos que foram modificados
+	
+	git checkout <file>	Retorna o arquivo para antes da edição
+
+	git reset HEAD <file>	Retorna uma alteração para o HEAD, usado quando os arquivos já foram add e queremos desfazer
+
+	git reset 	(passar o commit no qual queremos voltar) (Altera o historico dos commits)
+		--sort 		Volta para o estado de STAGED pronto para commit
+		--mixed		Preparado mais não mudado para STAGED
+		--hard 		Mata tudo que foi feito no commit
+	

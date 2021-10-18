@@ -1,0 +1,3 @@
+# Voltando para o commit anteior:
+
+git reset --hard HEAD~1
