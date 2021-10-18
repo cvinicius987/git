@@ -17,6 +17,7 @@ Exibe uma relação de opções no comando desejado.
 ### 💻 Conteúdo
 
 - [x] [Git Add](commands/git_add.md)
+- [x] [Git Branch](commands/git_branch.md)
 - [x] [Git Checkout](commands/git_checkout.md)
 - [x] [Git Commit](commands/git_commit.md)
 - [x] [Git Config](commands/git_config.md)
