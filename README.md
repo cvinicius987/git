@@ -35,4 +35,6 @@ A melhor referências de Git atualmente disponibilizada são:
 
 [Atlassian Git](https://www.atlassian.com/git/tutorials)
 
+[Git Explorer](https://gitexplorer.com/)
+
 [⬆ Voltar ao topo](#git)<br />
