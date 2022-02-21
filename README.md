@@ -21,6 +21,7 @@ Exibe uma relação de opções no comando desejado.
 - [x] [Git Checkout](commands/git_checkout.md)
 - [x] [Git Commit](commands/git_commit.md)
 - [x] [Git Config](commands/git_config.md)
+- [x] [Git Merge](commands/git_merge.md)
 - [x] [Git Rebase](commands/git_rebase.md)
 - [x] [Git Remote](commands/git_remote.md)
 - [x] [Git Reset](commands/git_reset.md)
