@@ -13,3 +13,11 @@ git fetch --all
 ```
 git pull --all
 ```
+#### Removendo branches locais
+```
+git branch -D <nome>
+```
+#### Removendo branches remotas
+```
+git push origin --delete nome-da-branch
+```
