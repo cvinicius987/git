@@ -24,9 +24,9 @@ git push origin --delete nome-da-branch
 #### Renomeando branches locais e remotas
 Branches remotas não são renomeadas, são deletadas e substituidas por uma nova branch.
 
-*Branch atual:* feature/nova-funcionalidade
+**Branch atual:** feature/nova-funcionalidade
 
-*Nova Branch:* feature/nova-funcionalidade-de-produtos
+**Nova Branch:** feature/nova-funcionalidade-de-produtos
 ```
 git branch -m feature/nova-funcionalidade-de-produtos
 ```
