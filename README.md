@@ -28,6 +28,10 @@ Exibe uma relação de opções no comando desejado.
 - [x] [Git Revert](commands/git_revert.md)
 - [x] [Git Push](commands/git_push.md)
 
+### 💻 Merge/Pull Requests
+
+- [X] [Feature Branch Rebase Main](requests/feature_branch_request.md)
+
 ### Referências
 
 A melhor referências de Git atualmente disponibilizada são:
