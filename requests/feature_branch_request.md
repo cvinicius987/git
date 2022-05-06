@@ -26,5 +26,5 @@ ou
 
 > Em caso de outras pessoas terem enviado commits para a FB, preserva os commits, mais seguro que o *--force*
 ```
-git push ----force-with-lease origin <feature-branch>
+git push --force-with-lease origin <feature-branch>
 ```
